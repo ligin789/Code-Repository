@@ -27,11 +27,19 @@ function closeNav() {
 }
 // Navbar link selection
 function menuClick(menuItem) {
-    let navArray = ["HTML","JS","CSS","PHP"]
+    const navArray = ["HTML","JS","CSS","PHP"];
     document.getElementById(menuItem).innerHTML = "<div class='navbr col'></div>";
     for (const i in navArray) {
         if (navArray[i] != menuItem) {
             document.getElementById(navArray[i]).innerHTML = "";
+        }
+    }
+    var select = $("a#navLinks");
+    for (var i = 0; i < select.length; i++) {
+        if (select[i].textContent == menuItem) {
+            select[i].style.color="red";
+        }else{
+            select[i].style.color = "black";
         }
     }
 }
