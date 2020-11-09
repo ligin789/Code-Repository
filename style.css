@@ -11,11 +11,9 @@ body{
 nav{
     background-color: #fff;
 }
-.activeLink{
-  color: #FF4D4D;
-}
 #navLinks{
   cursor: pointer;
+  color: black;
 }
 #navLinks:hover{
   color: #FF4D4D;
@@ -51,7 +49,7 @@ nav{
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #FF4D4D;
+  color: black;
 }
 
 /* Position and style the close button (top right corner) */
@@ -71,11 +69,40 @@ nav{
     overflow: hidden;
     display: none;
 }
+.menu-items a:hover{
+  background-color: #ff4d4d2d;
+}
 .navbr{
   border-bottom: 20px solid #FF4D4D;
   border-radius: 30px;
   margin-bottom: -100px;
 }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 985px) {
+.navbr{
+  display: none;
+}
+.ulList li{
+  margin: auto;
+}
+#navbarSupportedContent form,input{
+  margin: auto;
+}
+#navbarSupportedContent input{
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+} 
+@media screen and (min-width: 990px) {
+  #navbarSupportedContent{
+  margin-left: -360px;
+}
+#navbarSupportedContent input{
+  margin-right: 55px;
+}
+} 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
