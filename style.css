@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url('./Fonts/Montserrat-SemiBold.ttf');
+}
+body{
+    font-family: Montserrat-SemiBold;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F6FF;
+}
+nav{
+    background-color: #fff;
+}
+.activeLink{
+  color: #FF4D4D;
+}
+#navLinks{
+  cursor: pointer;
+}
+#navLinks:hover{
+  color: #FF4D4D;
+}
+#searchBar{
+  background-image: url('./SVGs/search.svg');
+  background-repeat: no-repeat;
+  background-position: 5px 9px; 
+  padding: 12px 15px 12px 30px;
+}
+ /* The side navigation menu */
+.sidenav {
+  min-height: 82%; /* 100% Full-height */
+  width: 20px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  background-color: rgb(255, 255, 255); /* Black*/
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: inline-block;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #BABABA;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #FF4D4D;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.menu-title{
+  width: 100px;
+  margin-top: -35px;
+  display: none;
+}
+.menu-items{
+    overflow: hidden;
+    display: none;
+}
+.navbr{
+  border-bottom: 20px solid #FF4D4D;
+  border-radius: 30px;
+  margin-bottom: -100px;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+}
+.mainContent{
+    margin-left: 45px;
+    min-height: 82vh;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+.mainHeading{
+    margin-left: 45px;
+    margin-bottom: 20px;
+    min-height: 10vh;
+    border-radius: 20px;
+    background-color: #fff;
+    display: block;
+    padding: 20px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+.mainSection{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#menuButton{
+    transform:rotate(180deg);
+}
+#closebtn{
+    transform: translateX(50px);
+}
+.nav-item{
+overflow: hidden;
+padding: 10px;
+}
