@@ -28,7 +28,7 @@ nav{
 .sidenav {
   min-height: 82%; /* 100% Full-height */
   width: 20px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   background-color: rgb(255, 255, 255); /* Black*/
   padding-top: 60px; /* Place content 60px from the top */
@@ -112,7 +112,7 @@ nav{
     min-height: 82vh;
     border-radius: 20px;
     background-color: #fff;
-    padding: 20px;
+    padding: 30px 40px 30px 40px;
 }
 .mainHeading{
     margin-left: 45px;
@@ -142,4 +142,40 @@ nav{
 .nav-item{
 overflow: hidden;
 padding: 10px;
+}
+/* Components */
+/* group Button */
+.selected-button {
+    background-color: #FF4D4D;
+    color: white;
+    outline: none;
+}
+
+.selected-button:hover {
+    color: white;
+}
+
+.startButton {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.endButton {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.question{
+  cursor: pointer;
+  text-align:  justify;
+}
+@media screen and (max-width: 425px) {
+.btn{
+  font-size: 12px;
+}
+.btn-group{
+  margin-left: -15px;
+}
+.question{
+  font-size: 12px;
+}
 }
