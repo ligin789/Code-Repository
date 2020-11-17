@@ -7,7 +7,7 @@ function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "270px";
     }
-    document.getElementById("menu-title").style.display = "block";
+    setTimeout(function () { document.getElementById("menu-title").style.display = "block"; }, 300);
     document.getElementById("menu-items").style.display = "block";
     document.getElementById("closebtn").onclick = function () { closeNav(); }
     $('#menuButton').css("transform", "rotate(360deg)");
@@ -21,7 +21,7 @@ function closeNav() {
         document.getElementById("mySidenav").style.width = "20px";
     } else {
         document.getElementById("mySidenav").style.width = "20px";
-        document.getElementById("main").style.marginLeft = "45px";
+        document.getElementById("main").style.marginLeft = "0px";
     }
     $('#menuButton').css("transform", "rotate(180deg)");
 }
@@ -42,4 +42,10 @@ function menuClick(menuItem) {
             select[i].style.color = "black";
         }
     }
+}
+function buttonGroup(buttonId) {
+    let Beginner = document.getElementById("Beginner").classList.remove("selected-button");
+    let Intermediate = document.getElementById("Intermediate").classList.remove("selected-button");
+    let Expert = document.getElementById("Expert").classList.remove("selected-button");
+    let button = buttonId.classList.add("selected-button");
 }
