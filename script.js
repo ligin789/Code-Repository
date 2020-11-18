@@ -43,9 +43,17 @@ function menuClick(menuItem) {
         }
     }
 }
+//button grp 3*3
 function buttonGroup(buttonId) {
     let Beginner = document.getElementById("Beginner").classList.remove("selected-button");
     let Intermediate = document.getElementById("Intermediate").classList.remove("selected-button");
     let Expert = document.getElementById("Expert").classList.remove("selected-button");
     let button = buttonId.classList.add("selected-button");
+  
 }
+//button grp 4*4
+$(document).ready(function(){
+    var matched = $("#groupButton *");
+    //alert("Number of elements in content div = " + matched.length);
+    document.addEventListener("click",myfunction());
+  });

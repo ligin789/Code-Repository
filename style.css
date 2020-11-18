@@ -1,120 +1,173 @@
 @font-face {
-  font-family: Montserrat-SemiBold;
-  src: url('./Fonts/Montserrat-SemiBold.ttf');
+    font-family: Montserrat-SemiBold;
+    src: url('./Fonts/Montserrat-SemiBold.ttf');
 }
-body{
+
+body {
     font-family: Montserrat-SemiBold;
     margin: 0;
     padding: 0;
     background-color: #F0F6FF;
 }
-nav{
+
+nav {
     background-color: #fff;
 }
-#navLinks{
-  cursor: pointer;
-  color: black;
+/* Admin login */
+.login-container form{
+    margin-top: 80px;
+    width: 50%;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123), 0 6px 20px 0 rgba(0, 0, 0, 0.082);
 }
-#navLinks:hover{
-  color: #FF4D4D;
+.login-container input{
+    border-color: #BABABA;
+    border-radius: 10px;
 }
-#searchBar{
-  background-image: url('./SVGs/search.svg');
-  background-repeat: no-repeat;
-  background-position: 5px 9px; 
-  padding: 12px 15px 12px 30px;
+.login-container input::placeholder{
+    color: #BABABA;
 }
- /* The side navigation menu */
+/* Admin login End*/
+#navLinks {
+    cursor: pointer;
+    color: black;
+}
+
+#navLinks:hover {
+    color: #FF4D4D;
+}
+
+#searchBar {
+    background-image: url('./SVGs/search.svg');
+    background-repeat: no-repeat;
+    background-position: 5px 9px;
+    padding: 12px 15px 12px 30px;
+}
+
+
+/* The side navigation menu */
+
 .sidenav {
-  min-height: 82%; /* 100% Full-height */
-  width: 20px; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  background-color: rgb(255, 255, 255); /* Black*/
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  display: inline-block;
+    min-height: 82%;
+    /* 100% Full-height */
+    width: 20px;
+    /* 0 width - change this with JavaScript */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    background-color: rgb(255, 255, 255);
+    /* Black*/
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: inline-block;
 }
+
 
 /* The navigation menu links */
+
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 15px;
-  color: #BABABA;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #BABABA;
+    transition: 0.3s;
 }
+
 
 /* When you mouse over the navigation links, change their color */
+
 .sidenav a:hover {
-  color: black;
+    color: black;
 }
 
+
 /* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
-.menu-title{
-  width: 100px;
-  margin-top: -35px;
-  display: none;
+
+.menu-title {
+    width: 100px;
+    margin-top: -35px;
+    display: none;
 }
-.menu-items{
+
+.menu-items {
     overflow: hidden;
     display: none;
 }
-.menu-items a:hover{
-  background-color: #ff4d4d2d;
-}
-.navbr{
-  border-bottom: 20px solid #FF4D4D;
-  border-radius: 30px;
-  margin-bottom: -100px;
+
+.menu-items a:hover {
+    background-color: #ff4d4d2d;
 }
 
+.navbr {
+    border-bottom: 20px solid #FF4D4D;
+    border-radius: 30px;
+    margin-bottom: -100px;
+}
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-width: 985px) {
-.navbr{
-  display: none;
+    .navbr {
+        display: none;
+    }
+    .ulList li {
+        margin: auto;
+    }
+    #navbarSupportedContent form,
+    input {
+        margin: auto;
+    }
+    #navbarSupportedContent input {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
-.ulList li{
-  margin: auto;
-}
-#navbarSupportedContent form,input{
-  margin: auto;
-}
-#navbarSupportedContent input{
-  width: 100%;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-} 
+
 @media screen and (min-width: 990px) {
-  #navbarSupportedContent{
-  margin-left: -360px;
+    #navbarSupportedContent {
+        margin-left: -360px;
+    }
+    #navbarSupportedContent input {
+        margin-right: 55px;
+    }
 }
-#navbarSupportedContent input{
-  margin-right: 55px;
-}
-} 
+
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
-  transition: margin-left .5s;
+    transition: margin-left .5s;
 }
-.mainContent{
+
+.mainContent {
     margin-left: 45px;
     min-height: 82vh;
     border-radius: 20px;
     background-color: #fff;
     padding: 30px 40px 30px 40px;
 }
-.mainHeading{
+
+.mainHeading {
     margin-left: 45px;
     margin-bottom: 20px;
     min-height: 10vh;
@@ -123,28 +176,44 @@ nav{
     display: block;
     padding: 20px;
 }
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-} 
-.mainSection{
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.mainSection {
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-#menuButton{
-    transform:rotate(180deg);
+
+#menuButton {
+    transform: rotate(180deg);
 }
-#closebtn{
+
+#closebtn {
     transform: translateX(50px);
 }
-.nav-item{
-overflow: hidden;
-padding: 10px;
+
+.nav-item {
+    overflow: hidden;
+    padding: 10px;
 }
+
+
 /* Components */
+
+
 /* group Button */
+
 .selected-button {
     background-color: #FF4D4D;
     color: white;
@@ -164,18 +233,114 @@ padding: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.question{
-  cursor: pointer;
-  text-align:  justify;
+
+.question {
+    cursor: pointer;
+    text-align: justify;
 }
+
 @media screen and (max-width: 425px) {
-.btn{
-  font-size: 12px;
+    .btn {
+        font-size: 12px;
+    }
+    .btn-group {
+        margin-left: -15px;
+    }
+    .question {
+        font-size: 12px;
+    }
 }
-.btn-group{
-  margin-left: -15px;
+
+
+/*add question */
+
+#addctg {
+    background-image: url("./SVGs/add.svg");
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    background-size: 25px;
+    background-position: 5%;
+    background-size: 25px;
+    background-position: 10px;
 }
-.question{
-  font-size: 12px;
+
+
+/*question icon*/
+
+#qtn {
+    background-image: url("./SVGs/question.svg");
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    position: relative;
+    background-size: 25px;
+    background-position: 10px;
+    max-width: 820px;
 }
+
+#userimg {
+    background-image: url("./SVGs/user.svg");
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    position: relative;
+    background-size: 20px;
+    background-position: 10px;
+    max-width: 820px;
+}
+#lock {
+    background-image: url("./SVGs/password.svg");
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    position: relative;
+    background-size: 20px;
+    background-position: 10px;
+    max-width: 820px;
+}
+
+
+/*Ripple effect for button*/
+
+
+/* Ripple effect */
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background: #FF4D4D radial-gradient(circle, transparent 1%, #FF4D4D 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: #e08181;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+
+/* Upload box */
+
+.card-cloud {
+    position: relative;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 60%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px dashed rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding-left: 50px;
+}
+
+
+/* upload file */
+
+.upload-file {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.image-upload input {
+    display: none;
 }
