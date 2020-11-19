@@ -43,9 +43,23 @@ function menuClick(menuItem) {
         }
     }
 }
-function buttonGroup(buttonId) {
-    let Beginner = document.getElementById("Beginner").classList.remove("selected-button");
-    let Intermediate = document.getElementById("Intermediate").classList.remove("selected-button");
-    let Expert = document.getElementById("Expert").classList.remove("selected-button");
-    let button = buttonId.classList.add("selected-button");
+//button grp 3*3
+function buttonGroup(buttonId,buttonClass) {
+    $('.' + buttonClass).each(function (i, obj) {
+        obj.classList.remove("selected-button");
+    });
+    buttonId.classList.add("selected-button");
+}
+// select all
+function selectAllCheck(buttonCheck) {
+    if (buttonCheck.checked) {
+        $('.question-checkbox').each(function (i, obj) {
+            obj.checked = true;
+        });
+    }else{
+        $('.question-checkbox').each(function (i, obj) {
+            obj.checked = false;
+        });
+    }
+    
 }
