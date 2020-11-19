@@ -44,16 +44,22 @@ function menuClick(menuItem) {
     }
 }
 //button grp 3*3
-function buttonGroup(buttonId) {
-    let Beginner = document.getElementById("Beginner").classList.remove("selected-button");
-    let Intermediate = document.getElementById("Intermediate").classList.remove("selected-button");
-    let Expert = document.getElementById("Expert").classList.remove("selected-button");
-    let button = buttonId.classList.add("selected-button");
-  
+function buttonGroup(buttonId,buttonClass) {
+    $('.' + buttonClass).each(function (i, obj) {
+        obj.classList.remove("selected-button");
+    });
+    buttonId.classList.add("selected-button");
 }
-//button grp 4*4
-$(document).ready(function(){
-    var matched = $("#groupButton *");
-    //alert("Number of elements in content div = " + matched.length);
-    document.addEventListener("click",myfunction());
-  });
+// select all
+function selectAllCheck(buttonCheck) {
+    if (buttonCheck.checked) {
+        $('.question-checkbox').each(function (i, obj) {
+            obj.checked = true;
+        });
+    }else{
+        $('.question-checkbox').each(function (i, obj) {
+            obj.checked = false;
+        });
+    }
+    
+}

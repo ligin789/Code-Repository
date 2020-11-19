@@ -30,21 +30,21 @@
         <a class="navbar-brand p-0" href="#">
             <img src="./SVGs/Logo3.png" width="200" height="60" alt="" loading="lazy" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse p-0" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto ulList">
                 <li class="nav-item text-center col-5" onclick="menuClick('HTML')">
-                    <a class="nav-link activeLink" id="navLinks" style="color: #ff4d4d">HTML</a
-            >
-            <span id="HTML">
-              <div class="navbr col"></div>
-            </span>
-          </li>
-          <li class="nav-item text-center col-5" onclick="menuClick('JS')">
-            <a class="nav-link" id="navLinks">JS</a>
+                    <a class="nav-link activeLink" id="navLinks" style="color: #ff4d4d">HTML</a>
+                    <span id="HTML">
+                        <div class="navbr col"></div>
+                    </span>
+                </li>
+                <li class="nav-item text-center col-5" onclick="menuClick('JS')">
+                    <a class="nav-link" id="navLinks">JS</a>
                     <span id="JS"></span>
                 </li>
                 <li class="nav-item text-center col-5" onclick="menuClick('CSS')">
@@ -75,64 +75,62 @@
         </div>
         <div id="main">
             <div class="mainContent shadow">
-                <!-- Multiple Buttons -->
-                <div class="btn-group-sl p-2">Choose language:</div>
-                <div class="btn-group btn-group-sl p-2" role="group" id="groupButton" aria-label="Basic example">
-                    <button type="button" class="btn selected-button border startButton">HTML</button>
-                    <button type="button" class="btn border">CSS</button>
-                    <button type="button" class="btn border">JavaScript</button>
-                    <button type="button" class="btn border endButton">PHP</button>
+                <h6>Choose Language:</h6>
+                <div class="radio-group">
+                    <input type="radio" class="radio" name="myRadio" id="myRadio1" value="HTML" checked/>
+                    <label for="myRadio1" class="radio-label">HTML</label>
+                    <input type="radio" class="radio" name="myRadio" id="myRadio2" value="CSS"/>
+                    <label for="myRadio2" class="radio-label">CSS</label>
+                    <input type="radio" class="radio" name="myRadio" id="myRadio3" value="Javascript"/>
+                    <label for="myRadio3" class="radio-label">Javascript</label>
+                    <input type="radio" class="radio" name="myRadio" id="myRadio4" value="PHP"/>
+                    <label for="myRadio4" class="radio-label">PHP</label>
                 </div>
-                <div class="btn-group-sl p-2">Choose language:</div>
-                <div class="btn-group btn-group-sl" id="menuDefault" role="group">
-                    <button type="button" id="Beginner" onclick="buttonGroup(this)" class="btn selected-button border startButton">
-              Beginner
-            </button>
-                    <button type="button" id="Intermediate" onclick="buttonGroup(this)" class="btn border">
-              Intermediate
-            </button>
-                    <button type="button" id="Expert" onclick="buttonGroup(this)" class="btn border endButton">
-              Expert
-            </button>
+                <h6>Choose difficulty level:</h6>
+                <div class="radio-group">
+                    <input type="radio" class="radio" name="level" id="one" value="Beginner" checked/>
+                    <label for="one" class="radio-label">Beginner</label>
+                    <input type="radio" class="radio" name="level" id="two" value="Intermediate"/>
+                    <label for="two" class="radio-label">Intermediate</label>
+                    <input type="radio" class="radio" name="level" id="three" value="Expert"/>
+                    <label for="three" class="radio-label">Expert</label>
                 </div>
-                <div class="dropdown btn-group-sl my-4 d-flex">
-                    <button class="btn dropdown-toggle btn-sl border border-secondary m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Choose catagory
-            </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                <div class="choose-category-wrap">
+                    <div class="row">
+                        <div class="col-lg mb-2">
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-2 mx-auto mb-2">
+                            <center>Or</center>
+                        </div>
+                        <div class="col-lg mb-2">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+                                    aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <label class="move btn-group-sl p-2 m-2 d-flex"> Or</label>
-
-                    <!-- Add new catagory with + icon -->
-                    <input type="text" class="form-control d-flex m-2 d-inline" id="addctg" placeholder="Add new category" />
-                    <button type="submit" class="btn my-2 selected-button ripple">
-                     Add
-                    </button>
-                </div>
-                <!--Add Button -->
-                <!-- Question to be added with ? icon -->
-                <div class="form-group-sl p-1 ">
-                    <input type="text" class="form-control " id="qtn" placeholder="Enter the question">
-                </div>
-
-                <!-- Card to insert Browse image-->
-                <div class="card-cloud btn-group-sl my-2">
-                    <div class="card-body image-upload">
-                        <label for="file-input">
-                    <img style="cursor: pointer;"src="SVGs/uploader.svg"/>
-                  </label>
-                        <input class="mx-auto" id="file-input" type="file" />
+                    <span class="textarea" role="textbox" contenteditable></span>
+                    <div class="file-upload-container">
+                        <div class="image-upload">
+                            <label for="file-input">
+                                <img src="./SVGs/uploader.svg" />
+                            </label>
+                            <input id="file-input" type="file" />
+                        </div>
                     </div>
                 </div>
-                <!-- Add Reset Button -->
-                <button type="submit" class="btn my-2 selected-button ripple ">Add</button>
-                <button type="reset" class="btn my-2 selected-button ripple">Reset</button>
+                
             </div>
         </div>
-        <footer></footer>
     </div>
 </body>
 
